@@ -101,3 +101,54 @@ Java supports both static and non-static methods, each having distinct character
 
 This table provides a comprehensive comparison between static and non-static methods in Java, highlighting their differences in declaration, invocation, association, access to members, usage, memory allocation, and lifetime. Understanding these differences is crucial for effective utilization of methods in Java programming.
 
+# Method Overloading in Java
+
+Method overloading is a feature in Java that allows the creation of multiple methods within the same class, sharing the same name but differing in their parameter lists. This enables methods to perform different tasks based on the arguments passed to them.
+
+### Key Characteristics of Method Overloading:
+
+1. **Same Method Name:**
+   - Overloaded methods share the same name within the class.
+   - The method signature includes the method name and parameter list.
+
+2. **Different Parameters:**
+   - Overloaded methods have different parameter lists, differing in the number or types of parameters.
+
+3. **Return Type:**
+   - The return type of the method may or may not be the same. Method overloading is solely dependent on the method signature, not the return type.
+
+4. **Compile-Time Polymorphism:**
+   - The decision about which overloaded method to call is made by the compiler based on the arguments passed at compile time.
+
+### Benefits of Method Overloading:
+
+1. **Improved Code Readability:**
+   - Grouping similar functionalities under the same method name enhances code readability and organization. Developers can easily identify related functionalities within the codebase.
+
+2. **Avoidance of Complex Naming:**
+   - Eliminates the need for cryptic method names to differentiate functionalities. Instead of creating numerous methods with slightly different names, overloading allows similar operations to be consolidated under a single, descriptive method name.
+
+3. **Flexibility in Design:**
+   - Allows for different parameter variations for similar operations. This flexibility provides convenience when dealing with methods that perform similar tasks but on different data types or with varying numbers of arguments.
+
+### Example:
+
+```java
+public class Calculation {
+
+    // Method to add two integers
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method to add three integers
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Method to concatenate two strings
+    public String add(String a, String b) {
+        return a + " " + b;
+    }
+}
+```
