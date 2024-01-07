@@ -61,3 +61,41 @@ public class DataTypesExample {
     }
 }
 
+```
+# Understanding Type Casting in Java
+
+This Java program demonstrates the concept of type casting, which involves converting one data type into another. In Java, type casting can be categorized into implicit (widening) and explicit (narrowing) casting.
+
+### Implicit (Widening) Casting:
+
+- **Implicit casting** occurs automatically when a smaller data type is converted into a larger data type. This happens when there is no loss of information in the conversion.
+
+    ```java
+    int myInt = 100;
+    long myLong = myInt; // Implicit casting from int to long
+    float myFloat = myLong; // Implicit casting from long to float
+    double myDouble = myFloat; // Implicit casting from float to double
+    ```
+
+    **Output after implicit casting:**
+    - Int to Long: 100
+    - Long to Float: 100.0
+    - Float to Double: 100.0
+
+### Explicit (Narrowing) Casting:
+
+- **Explicit casting** is performed manually when converting from a larger data type to a smaller one. This conversion may result in data loss if the value being converted is too large for the target data type.
+
+    ```java
+    double myDouble2 = 1234.567;
+    float myFloat2 = (float) myDouble2; // Explicit casting from double to float
+    long myLong2 = (long) myFloat2; // Explicit casting from float to long
+    int myInt2 = (int) myLong2; // Explicit casting from long to int
+    ```
+
+    **Output after explicit casting:**
+    - Double to Float: 1234.567
+    - Float to Long: 1234
+    - Long to Int: 1234
+
+This README provides an example showcasing both implicit and explicit type casting in Java, highlighting how data types can be converted from one type to another in different scenarios.
