@@ -30,6 +30,8 @@ Access modifiers in Java are keywords that regulate the visibility or accessibil
 
 Access modifiers applied to methods specify their visibility and control their accessibility from other classes or subclasses. They define which other classes or packages can invoke or access those methods.
 
+<img src="https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2020/02/accessibility-of-access-modifiers-in-java.jpg" alt="Access Modifier Visibility" title="AccessModifierVisibility">
+
 ### Example Demonstrating Method Visibility:
 
 Consider a class `ExampleClass` with different methods using various access modifiers:
