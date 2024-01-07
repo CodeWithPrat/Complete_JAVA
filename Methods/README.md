@@ -152,3 +152,51 @@ public class Calculation {
     }
 }
 ```
+# Rules for Method Overloading in Java
+
+Method overloading is a feature in Java that allows the creation of multiple methods in the same class with the same name but different parameters. These methods perform similar tasks but can accept different inputs, offering flexibility and enhancing code readability.
+
+### Rules for Method Overloading:
+
+1. **Method Signature:**
+   - Method overloading is determined by the method signature, which includes the method name and parameter list.
+   - Two methods with the same name but different parameters (number, type, or order) can be overloaded.
+
+2. **Parameters:**
+   - Overloaded methods must differ in the number or type of parameters.
+   - Differences in parameters include changes in the number of parameters, their types, or their order.
+
+3. **Return Type:**
+   - Overloaded methods can have the same or different return types.
+   - Overloading is not affected by changes in the return type alone.
+
+4. **Exception Handling:**
+   - Overloaded methods can throw different exceptions.
+   - Changing the type or number of exceptions thrown does not affect method overloading.
+
+5. **Access Modifiers and Non-Access Modifiers:**
+   - Method overloading is not affected by changes in access modifiers (public, private, protected) or non-access modifiers (static, final, abstract).
+
+6. **Varargs and Overloading:**
+   - Methods with variable-length arguments (varargs) can be overloaded with methods having explicitly defined parameters.
+   - However, overloading methods with varargs and array parameters can lead to ambiguity.
+
+### Example of Method Overloading:
+
+```java
+public class Calculation {
+
+    // Overloaded methods to add integers
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Overloaded methods to concatenate strings
+    public String add(String a, String b) {
+        return a + " " + b;
+    }
+}
