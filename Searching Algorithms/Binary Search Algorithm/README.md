@@ -10,6 +10,52 @@ Binary Search is based on the principle of divide and conquer. It works by selec
 
 The `BinarySearch.java` file contains the Java implementation of the Binary Search algorithm. The `binarySearch` method takes a sorted array of integers and a target element as input and performs the binary search.
 
+# Binary Search Algorithm Explanation
+
+Binary Search is a searching algorithm used to find the position of a target value within a sorted array efficiently.
+
+## Algorithm Steps
+
+1. **Initialize Pointers:** Set the `left` pointer to the start of the array (index 0) and the `right` pointer to the end of the array (index `array.length - 1`).
+
+2. **Loop Until Pointers Meet:**
+   - Continue the search as long as the `left` pointer is less than or equal to the `right` pointer.
+
+3. **Calculate Middle Index:**
+   - Compute the `mid` index as `(left + right) / 2` or `left + (right - left) / 2` to find the middle element.
+
+4. **Compare Middle Element with Target:**
+   - If the middle element is equal to the target, return the `mid` index as the position of the target element.
+   - If the middle element is less than the target, update the `left` pointer to `mid + 1` to search the right half.
+   - If the middle element is greater than the target, update the `right` pointer to `mid - 1` to search the left half.
+
+5. **Repeat the Process:**
+   - Continue the process, dividing the search interval in half at each iteration, until the target element is found or until the `left` pointer is greater than the `right` pointer.
+
+6. **Return -1 if Element Not Found:**
+   - If the element is not found after the loop, return -1 to indicate that the target element is not present in the array.
+
+## Pseudocode
+
+```plaintext
+BinarySearch(array, target):
+    left = 0
+    right = array.length - 1
+
+    while left <= right:
+        mid = left + (right - left) / 2
+        
+        if array[mid] == target:
+            return mid
+        else if array[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    return -1 // Element not found
+```
+
+## Example
 ```java
 public class BinarySearch {
     public static int binarySearch(int[] arr, int target) {
