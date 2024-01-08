@@ -38,6 +38,11 @@ Let's say we have an unsorted list: `[5, 3, 8, 2, 1, 4]`.
 
 After several passes, the list is sorted from smallest to largest: `[1, 2, 3, 4, 5, 8]`.
 
+<p align="center">
+  <img src="https://miro.medium.com/v2/resize:fit:776/1*7QsZkfrRGhAu5yxxeDdzsA.png" alt="Bubble Sort" title="Bubble Sort Algorithm">
+</p>
+
+
 ## Bubble Sort Algorithm
 
 ```plaintext
